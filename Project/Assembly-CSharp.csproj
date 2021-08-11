@@ -36,7 +36,14 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Script\LeftClickMoveModeScene.cs" />
+     <Compile Include="Assets\Script\LeftClickMoveMainScene.cs" />
+     <Compile Include="Assets\Script\ModeManagement.cs" />
+     <Compile Include="Assets\Script\AppManagement.cs" />
+     <Compile Include="Assets\Script\DestroyTime.cs" />
+     <Compile Include="Assets\Script\Blink.cs" />
+     <Compile Include="Assets\Script\TitleManagement.cs" />
+     <Compile Include="Assets\Script\AppInitial.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -269,10 +276,10 @@
         <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.16f1/Editor/Data/Managed/UnityEngine/UnityEditor.UnityConnectModule.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-        <HintPath>C:/Users/haru/Desktop/UnityGameProject20210808.git/Project/Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
+        <HintPath>C:/Users/haru/Desktop/Project/Library/PackageCache/com.unity.visualscripting@1.6.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>C:/Users/haru/Desktop/UnityGameProject20210808.git/Project/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
+        <HintPath>C:/Users/haru/Desktop/Project/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.16f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -619,59 +626,76 @@
     <Reference Include="System.Xml.Serialization">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.16f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.VisualScripting.Flow.Editor">
-        <HintPath>C:/Users/haru/Desktop/UnityGameProject20210808.git/Project/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:/Users/haru/Desktop/UnityGameProject20210808.git/Project/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>C:/Users/haru/Desktop/UnityGameProject20210808.git/Project/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualStudio.Editor">
-        <HintPath>C:/Users/haru/Desktop/UnityGameProject20210808.git/Project/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline.Editor">
-        <HintPath>C:/Users/haru/Desktop/UnityGameProject20210808.git/Project/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-        <HintPath>C:/Users/haru/Desktop/UnityGameProject20210808.git/Project/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core.Editor">
-        <HintPath>C:/Users/haru/Desktop/UnityGameProject20210808.git/Project/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.TextMeshPro">
-        <HintPath>C:/Users/haru/Desktop/UnityGameProject20210808.git/Project/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State.Editor">
-        <HintPath>C:/Users/haru/Desktop/UnityGameProject20210808.git/Project/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="VSSettingsProvider">
-        <HintPath>C:/Users/haru/Desktop/UnityGameProject20210808.git/Project/Library/ScriptAssemblies/VSSettingsProvider.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Flow">
-        <HintPath>C:/Users/haru/Desktop/UnityGameProject20210808.git/Project/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor.UI">
-        <HintPath>C:/Users/haru/Desktop/UnityGameProject20210808.git/Project/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.PlasticSCM.Editor">
-        <HintPath>C:/Users/haru/Desktop/UnityGameProject20210808.git/Project/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Rider.Editor">
-        <HintPath>C:/Users/haru/Desktop/UnityGameProject20210808.git/Project/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UI">
-        <HintPath>C:/Users/haru/Desktop/UnityGameProject20210808.git/Project/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.State">
-        <HintPath>C:/Users/haru/Desktop/UnityGameProject20210808.git/Project/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.VisualScripting.Core">
-        <HintPath>C:/Users/haru/Desktop/UnityGameProject20210808.git/Project/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Unity.VisualScripting.Flow.Editor.csproj">
+      <Project>{ce3eb43d-0115-835c-0c35-912c75e0377e}</Project>
+      <Name>Unity.VisualScripting.Flow.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VSCode.Editor.csproj">
+      <Project>{3fab8b67-ef54-2447-c44b-12a1c8283d24}</Project>
+      <Name>Unity.VSCode.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.Editor.csproj">
+      <Project>{b6b0e2cf-66f7-d0df-18e3-41b175f9f015}</Project>
+      <Name>Unity.TextMeshPro.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualStudio.Editor.csproj">
+      <Project>{8941f084-7915-d33d-cc6b-8a843303ff24}</Project>
+      <Name>Unity.VisualStudio.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.Editor.csproj">
+      <Project>{5088bdc6-82c8-af1d-0b08-3f8a02859e17}</Project>
+      <Name>Unity.Timeline.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Timeline.csproj">
+      <Project>{83509f5c-637b-d440-65f5-0b969e5d671b}</Project>
+      <Name>Unity.Timeline</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Core.Editor.csproj">
+      <Project>{52979a30-79e2-2bc0-fffb-a1f4c67b6140}</Project>
+      <Name>Unity.VisualScripting.Core.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.TextMeshPro.csproj">
+      <Project>{8c0617e9-7ed2-3dd6-fbe7-0f1cb2359e6c}</Project>
+      <Name>Unity.TextMeshPro</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.State.Editor.csproj">
+      <Project>{b3c91a49-5992-32c4-4389-e3cf43615b40}</Project>
+      <Name>Unity.VisualScripting.State.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="VSSettingsProvider.csproj">
+      <Project>{23bdcb10-06fe-b807-be4e-9f98a4fdee84}</Project>
+      <Name>VSSettingsProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Flow.csproj">
+      <Project>{303eb4a1-5b26-b0cc-86e8-72c6a6fc850f}</Project>
+      <Name>Unity.VisualScripting.Flow</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.UI.csproj">
+      <Project>{77e8836b-0712-331e-aca6-b2a122b5a702}</Project>
+      <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.PlasticSCM.Editor.csproj">
+      <Project>{e8a6eaf5-22b6-2589-1e55-d7999f06272e}</Project>
+      <Name>Unity.PlasticSCM.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Rider.Editor.csproj">
+      <Project>{f7dc0242-1430-1a6e-baf5-116440acd488}</Project>
+      <Name>Unity.Rider.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.UI.csproj">
+      <Project>{fa1101a3-bedf-00c3-ca8d-566e6af9622a}</Project>
+      <Name>UnityEngine.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.State.csproj">
+      <Project>{8bd95e68-c53d-c904-6844-417016531881}</Project>
+      <Name>Unity.VisualScripting.State</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.VisualScripting.Core.csproj">
+      <Project>{04db1542-759a-2349-dccb-5c766da02a86}</Project>
+      <Name>Unity.VisualScripting.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
