@@ -36,14 +36,12 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Script\LeftClickMoveModeScene.cs" />
-     <Compile Include="Assets\Script\LeftClickMoveMainScene.cs" />
+     <Compile Include="Assets\Script\AppInitial.cs" />
+     <Compile Include="Assets\Script\LeftClickMoveScene.cs" />
      <Compile Include="Assets\Script\ModeManagement.cs" />
      <Compile Include="Assets\Script\AppManagement.cs" />
-     <Compile Include="Assets\Script\DestroyTime.cs" />
      <Compile Include="Assets\Script\Blink.cs" />
      <Compile Include="Assets\Script\TitleManagement.cs" />
-     <Compile Include="Assets\Script\AppInitial.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2021.1.16f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

@@ -11,6 +11,7 @@ public class AppInitial : MonoBehaviour
         //イニシャル処理なのでゲーム起動初回時のみの実行
         
         //イニシャル処理実行後タイトルへ遷移
+        //タイトル遷移処理よりあとにロジックを入れない
         SceneManager.LoadScene("Title");
     }
 

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class AppManagement : MonoBehaviour {
 
-	public bool Testmonitor = false; //Testmonitorはデバッグ用 ロジックごと削除予定
+	public string NextScene = "Title";
 
 	// Use this for initialization
 	void Start () {
@@ -23,21 +23,15 @@ public class AppManagement : MonoBehaviour {
         Debug.Log ( scene.name + " scene loaded"); //デバッグ用ロジック
 		if(scene.name == "Title"){
 			//AppManagementは維持されるので初期化処理が必要な変数は初期化しておく
-			Testmonitor = false; //デバッグ用ロジック
-			Debug.Log (Testmonitor); //デバッグ用ロジック
-		}
-		else{
-			Testmonitor = true; //デバッグ用ロジック
-			Debug.Log (Testmonitor); //デバッグ用ロジック
 		}
     }
 
 	
 	// Update is called once per frame
 	void Update () {
-		//タイトル画面に戻る
-		if (Input.GetKey(KeyCode.H)) { //デバッグ用ロジック
-			SceneManager.LoadScene ("Title"); //デバッグ用ロジック
-		} //デバッグ用ロジック
+		//タイトル画面に戻る デバッグ用ロジック
+		if (Input.GetKey(KeyCode.H)) {
+			SceneManager.LoadScene ("Title");
+		}
 	}
 }
