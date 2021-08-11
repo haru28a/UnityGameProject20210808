@@ -7,23 +7,23 @@ EditorBuildSettings:
   m_Scenes:
   - enabled: 1
     path: Assets/Scenes/AppManagement.unity
-    guid: 543b2ea661362aa41b8638cec0271ee8
+    guid: b6f7e1ffd29d2ba439b082aa3148df98
   - enabled: 1
     path: Assets/Scenes/Title.unity
-    guid: 3342bc4d392c6694d991fe0c11a0808a
+    guid: b53b0e86010243944aaffaa28b347015
   - enabled: 1
     path: Assets/Scenes/Mode.unity
-    guid: 08ae33a5a3070d643bb353428717e116
+    guid: b06ccea1d54f65a4797b9905ab89bc71
   - enabled: 1
     path: Assets/Scenes/Main.unity
-    guid: c4a398934d1c14347aad4a4db87075ee
-  - enabled: 1
-    path: Assets/Scenes/Clear.unity
-    guid: 2ca6bc82ea8a99a4ea14228d3ad83783
+    guid: 1bd2c288c7264c64391bc5b076f82d32
   - enabled: 1
     path: Assets/Scenes/Fail.unity
-    guid: 32785d61d3ab929468c11709fe7a990a
+    guid: f6153c4209850d5458273de26a36c82f
+  - enabled: 1
+    path: Assets/Scenes/Clear.unity
+    guid: d70eea9e2c1aea042be09bf8d11603eb
   - enabled: 1
     path: Assets/Scenes/_DebugScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
