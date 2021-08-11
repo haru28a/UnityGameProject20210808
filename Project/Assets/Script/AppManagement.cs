@@ -20,7 +20,6 @@ public class AppManagement : MonoBehaviour {
 
     void OnSceneLoaded( Scene scene, LoadSceneMode mode ) {
 		//シーン遷移時に実行
-        Debug.Log ( scene.name + " scene loaded"); //デバッグ用ロジック
 		if(scene.name == "Title"){
 			//AppManagementは維持されるので初期化処理が必要な変数は初期化しておく
 		}
