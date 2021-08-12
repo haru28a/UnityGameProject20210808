@@ -24,6 +24,7 @@ public class TitleManagement : MonoBehaviour {
     void Update()
     {
         //左クリックでモード選択画面へ遷移
+        //マウス想定の操作になってるのでキーボード操作想定のロジックに作り直し※積み残し
         FullScreen.GetComponent<LeftClickMoveScene>().MoveScene();
     }
 }

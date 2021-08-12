@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 public class AppManagement : MonoBehaviour {
 
 	public string NextScene = "Title";
+	public bool QuestionSelectSW = false;
+	public bool LevelSelectSW = false;
 
 	// Use this for initialization
 	void Start () {
@@ -22,6 +24,8 @@ public class AppManagement : MonoBehaviour {
 		//シーン遷移時に実行
 		if(scene.name == "Title"){
 			//AppManagementは維持されるので初期化処理が必要な変数は初期化しておく
+			QuestionSelectSW = false;
+			LevelSelectSW = false;
 		}
     }
 
