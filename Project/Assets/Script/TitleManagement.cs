@@ -23,8 +23,7 @@ public class TitleManagement : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        //左クリックでモード選択画面へ遷移
-        //マウス想定の操作になってるのでキーボード操作想定のロジックに作り直し※積み残し
+        //スペースキーでモード選択画面へ遷移
         FullScreen.GetComponent<LeftClickMoveScene>().MoveScene();
     }
 }

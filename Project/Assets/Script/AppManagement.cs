@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class AppManagement : MonoBehaviour {
 
+	public int ModeSelectNum = 3; //キーの押下のみで判断しており汎用性が高いとは言えないロジックとなっているため改修したほうが良いかも ※問題ジャンルや難易度追加に対応できない。
+	public int LevelSelectNum = 2;
 	public string NextScene = "Title";
 	public bool QuestionSelectSW = false;
 	public bool LevelSelectSW = false;
