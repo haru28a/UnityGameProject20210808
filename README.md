@@ -7,5 +7,7 @@
 Unityのプロジェクトファイル本体  
 ・Project_Clone  
 Projectフォルダの中身のバックアップ用  
+・Software  
+ビルド済exeファイル格納用  
 ・Tool  
 ツールとか  
