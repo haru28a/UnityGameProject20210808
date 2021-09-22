@@ -8,6 +8,7 @@ public class ModeSelect : MonoBehaviour
     private bool ModeSelectDelayFlg = false;
     private bool ModeSelectLeft = false;
     private bool ModeSelectRight = false;
+    private bool ModeSelectCamPosReset = true;
     GameObject AppManagement;
     AppManagement AppManagementScript;
 
@@ -22,37 +23,86 @@ public class ModeSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(AppManagementScript.ModeSelectNum); //デバッグ用 積み残し対応終わったら消す
+        //難易度選択ロジックに切り替える際、カメラの座標を初期値にリセットする
+        if(AppManagementScript.LevelSelectSW == true){
+            if(ModeSelectCamPosReset == true){
+                Vector3 pos = this.gameObject.transform.position;
+                this.gameObject.transform.position = new Vector3 (pos.x = 0.0f, pos.y, pos.z);
+            }
+        }
+
+        //Debug.Log(AppManagementScript.ModeSelectNum); //デバッグ用 積み残し対応終わったら消す
+        //Debug.Log(AppManagementScript.LevelSelectNum); //デバッグ用 積み残し対応終わったら消す
         if(ModeSelectDelayFlg == false){
         //左に移動
-        //ガード処理を追加する ※積み残し
             if (Input.GetKey (KeyCode.LeftArrow)) {
-                this.transform.Translate (-30.0f,0.0f,0.0f);
+                Vector3 pos = this.gameObject.transform.position;
+                if(AppManagementScript.QuestionSelectSW == true){
+                    //ガード処理
+                    if(pos.x > -60.0f){
+		                this.gameObject.transform.position = new Vector3 (pos.x - 30.0f, pos.y, pos.z);
+                        ModeSelectLeft = true;
+                    }
+                }
+                if(AppManagementScript.LevelSelectSW == true){
+                    //ガード処理
+                    if(pos.x > -30.0f){
+		                this.gameObject.transform.position = new Vector3 (pos.x - 30.0f, pos.y, pos.z);
+                        ModeSelectCamPosReset = false;
+                        ModeSelectLeft = true;
+                    }
+                }
+                //this.transform.Translate (-30.0f,0.0f,0.0f); 旧ロジック
                 ModeSelectDelayFlg = true;
-                ModeSelectLeft = true;
+                //ModeSelectLeft = true; 旧ロジック
             }
         //右に移動
-        //ガード処理を追加する ※積み残し
             if (Input.GetKey (KeyCode.RightArrow)) {
-                this.transform.Translate (30.0f,0.0f,0.0f);
+                Vector3 pos = this.gameObject.transform.position;
+                if(AppManagementScript.QuestionSelectSW == true){
+                    //ガード処理
+                    if(pos.x < 60.0f){
+		                this.gameObject.transform.position = new Vector3 (pos.x + 30.0f, pos.y, pos.z);
+                        ModeSelectRight = true;
+                    }
+                }
+                if(AppManagementScript.LevelSelectSW == true){
+                    //ガード処理
+                    if(pos.x < 30.0f){
+		                this.gameObject.transform.position = new Vector3 (pos.x + 30.0f, pos.y, pos.z);
+                        ModeSelectCamPosReset = false;
+                        ModeSelectRight = true;
+                    }
+                }
+                //this.transform.Translate (30.0f,0.0f,0.0f); 旧ロジック
                 ModeSelectDelayFlg = true;
-                ModeSelectRight = true;
+                //ModeSelectRight = true; 旧ロジック
             }
         //問題選択と難易度選択判定
-        //ガード処理を追加する ※積み残し
+        //ガード処理によりガードされた場合は使わない
             if (ModeSelectLeft == true){
-                AppManagementScript.ModeSelectNum = AppManagementScript.ModeSelectNum - 1;
-                AppManagementScript.LevelSelectNum = AppManagementScript.LevelSelectNum - 1;
+                if(AppManagementScript.QuestionSelectSW == true){
+                    AppManagementScript.ModeSelectNum = AppManagementScript.ModeSelectNum - 1;
+                }
+                if(AppManagementScript.LevelSelectSW == true){
+                    AppManagementScript.LevelSelectNum = AppManagementScript.LevelSelectNum - 1;
+                }
                 ModeSelectLeft = false;
             }
 
             if (ModeSelectRight == true){
-                AppManagementScript.ModeSelectNum = AppManagementScript.ModeSelectNum + 1;
-                AppManagementScript.LevelSelectNum = AppManagementScript.LevelSelectNum + 1;
+                if(AppManagementScript.QuestionSelectSW == true){
+                    AppManagementScript.ModeSelectNum = AppManagementScript.ModeSelectNum + 1;
+                }
+                if(AppManagementScript.LevelSelectSW == true){
+                    AppManagementScript.LevelSelectNum = AppManagementScript.LevelSelectNum + 1;
+                }
                 ModeSelectRight = false;
             }
 
             if (ModeSelectDelayFlg == true){
+                //遅延ロジック
+                //連続入力を受け付けないように一定時間処理を止める
                 Invoke("ModeSelectDelay", 0.3f);
             }
         }
