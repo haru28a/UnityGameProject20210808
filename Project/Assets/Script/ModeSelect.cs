@@ -31,8 +31,8 @@ public class ModeSelect : MonoBehaviour
             }
         }
 
-        //Debug.Log(AppManagementScript.ModeSelectNum); //デバッグ用 積み残し対応終わったら消す
-        //Debug.Log(AppManagementScript.LevelSelectNum); //デバッグ用 積み残し対応終わったら消す
+        Debug.Log(AppManagementScript.ModeSelectNum); //デバッグ用 積み残し対応終わったら消す
+        Debug.Log(AppManagementScript.LevelSelectNum); //デバッグ用 積み残し対応終わったら消す
         if(ModeSelectDelayFlg == false){
         //左に移動
             if (Input.GetKey (KeyCode.LeftArrow)) {
