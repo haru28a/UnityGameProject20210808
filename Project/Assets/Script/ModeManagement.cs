@@ -76,13 +76,11 @@ public class ModeManagement : MonoBehaviour {
     void Update()
     {
         if(AppManagementScript.QuestionSelectSW == true){
-            //マウス想定の操作になってるのでキーボード操作想定のロジックに作り直し※積み残し
             Japanese.GetComponent<LeftClickMoveScene>().LevelSelect();
             Society.GetComponent<LeftClickMoveScene>().LevelSelect();
             Science.GetComponent<LeftClickMoveScene>().LevelSelect();
             English.GetComponent<LeftClickMoveScene>().LevelSelect();
             Mix.GetComponent<LeftClickMoveScene>().LevelSelect();
-            //各問題ジャンル判定ロジックを考える※積み残し
         }
 
         if(AppManagementScript.LevelSelectSW == true){
@@ -96,13 +94,10 @@ public class ModeManagement : MonoBehaviour {
             RenderObjEasy.enabled = true;
             RenderObjNormal.enabled = true;
             RenderObjHard.enabled = true;
-            //左クリックでメイン画面へ遷移
-            //マウス想定の操作になってるのでキーボード操作想定のロジックに作り直し※積み残し
+            //スペースキーでメイン画面へ遷移
             Easy.GetComponent<LeftClickMoveScene>().MoveScene();
             Normal.GetComponent<LeftClickMoveScene>().MoveScene();
             Hard.GetComponent<LeftClickMoveScene>().MoveScene();
         }
-        //各難易度の判定ロジックを考える※積み残し
-        //難易度毎にシーンを分けるのか、ステータスを持たせて一つのシーンで切り替えるのか
     }
 }

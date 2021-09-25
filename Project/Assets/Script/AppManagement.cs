@@ -35,8 +35,8 @@ public class AppManagement : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//タイトル画面に戻る デバッグ用ロジック
-		if (Input.GetKey(KeyCode.H)) {
-			SceneManager.LoadScene ("Title");
-		}
+		//if (Input.GetKey(KeyCode.H)) {
+			//SceneManager.LoadScene ("Title");
+		//}
 	}
 }
